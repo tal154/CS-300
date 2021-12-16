@@ -1,0 +1,62 @@
+Runtime chart
+Vector:
+Printing:
+Code	Line Cost	# Times Executes	Total Cost
+for all courses	1	n	n
+     if the course is the same as courseNumber	1	n	n
+         print out the course information	1	1	1
+         for each prerequisite of the course	1	n	n
+           print the prerequisite course information	1	n	n
+Total Cost	4n + 1
+Runtime	O(n)
+Sorting:
+ONLINE CHEAT SHEET (https://www.bigocheatsheet.com/)
+Quicksort runtime: O(n^2)
+Accessing:
+ONLINE CHEAT SHEET
+O(1)
+
+Insertion:
+ONLINE CHEAT SHEET
+O(n)
+
+Hash Table:
+Printing:
+for node begin to end iterate	1	n	n
+print course information	1	1	1
+total	 	 	2n+1
+runtime	 	 	O(n)
+
+Sorting:
+ONLINE CHEAT SHEET
+Insertion Sort: O(n^2)
+
+Accessing:
+ONLINE CHEAT SHEET
+Doubly-Linked List: O(n)
+
+
+Insertion:
+ONLINE CHEAT SHEET
+O(1)
+
+Tree:
+Printing:
+IF node is not equal to nullptr	1	n	n
+inOrder not left	1	n	n
+PRINT courseNumber, name, prerequisites 	1	1	1
+inOrder right	1	n	n
+total	 	 	3n+1
+runtime	 	 	O(n)
+
+Sorting:
+ONLINE CHEAT SHEET
+Tree Sort: O(n^2)
+
+Accessing:
+ONLINE CHEAT SHEET
+O(n)
+
+Insertion:
+ONLINE CHEAT SHEET
+O(n)
