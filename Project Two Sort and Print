@@ -1,0 +1,47 @@
+// define a structure for sort() function for sorting Course structure
+struct CompareCourse
+{
+    bool operator()(const Course& lhs, const Course& rhs) const
+    {
+        return lhs.courseNumber < rhs.courseNumber;
+    }
+};
+
+/**
+ * Print all courses
+ */
+void HashTable::PrintAll() {
+    // create vector of struct
+    vector<Course> course;
+
+    // populate vector
+    for (auto iter = nodes.begin(); iter != nodes.end(); ++iter) {
+        if (iter->course.courseNumber != "")
+        course.push_back(Course(iter->course.courseNumber, iter->course.courseTitle, iter->course.prerequisites1, iter->course.prerequisites2));
+    }
+
+    // sort vector by course number
+    sort(course.begin(), course.end(), CompareCourse());
+
+    for (unsigned i = 0; i < course.size(); i++) {
+        Print(course[i]);
+    }
+
+    // from the comments you gave me on the hash table assignment
+    // wanted to demonstrate how to print an unsorted table
+    /*for (auto iter = nodes.begin(); iter != nodes.end(); ++iter) {
+        if (iter->key != UINT_MAX) {
+            cout << "Key " << iter->key << ": " << iter->course.courseNumber << " | "
+                << iter->course.courseTitle << " | " << iter->course.prerequisites1 << " | "
+                << iter->course.prerequisites2 << endl;
+            Node* node = iter->next;
+            while (node != nullptr) {
+                cout << " " << node->key << ": " << node->course.courseNumber
+                    << " | " << node->course.courseTitle << " | " << node->course.prerequisites1
+                    << " | " << node->course.prerequisites2 << endl;
+                node = node->next;
+            }
+        }
+    }/*
+ 
+}
